@@ -25,7 +25,6 @@ linux4sam Link : https://github.com/linux4sam/meta-atmel
 1. Network Fail
   - edit /meta-yocto/conf/distro/poky.conf
   - CONNECTIVITY_CHECK_URIS = ""
-
 2. Library
   - build-essential
   - device-tree-compiler
