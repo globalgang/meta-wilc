@@ -4,8 +4,8 @@
 linux4sam Link : https://github.com/linux4sam/meta-atmel
 ~~~~
 linux4sam change log  
-*4월 09일 Kernel 폴더 변경 : linux-yocto-cutom -> linux-at91  
-*4월 13일 DISTRO = "poky" 로 빌드시 qt 화면 출력되지 않음.
+*4.09 Kernel Folder changed : linux-yocto-cutom -> linux-at91  
+*4.13 display is black when build set DISTRO = "poky"
 ~~~~
 ### Folder Tree ###
 
@@ -18,14 +18,14 @@ linux4sam change log
 
 ### File ###
 1. bb file  
-	>새로운 모듈 추가 혹은 기존 모듈의 업그레이드 버전 제공  
-	>새로운 폴더 혹은 기존 폴더 트리를 활용하되 다른 모듈과 이름이 중복되지 않도록 설정  
+	>Add new Module or Change upgrade Module  
+	>do not create duplicate file name  
 	>패키지명을 필히 작성해야하며, 빌드시 해당 명칭을 확인하여 빌드 진행  
 	>웹에서 다운로드하거나 파일을 구비하여 컴파일후 복사 혹은 펌웨어 같은 경우 바로 복사  
 	
 2. bbappend file  
-	>기존 모듈 편집  
-	>기존에 포함된 모듈과 동등한 위치에 있어야하고, 수정하고자 하는 모듈의 파일명과 동일해야함.  
+	>Edit or Override module  
+	>It has sam folder tree about existing modules for edit or override.  
 	>모듈의 편집이기 때문에 "수정될 사항을 기입"하면 됨.  
 	>파일 패치 혹은 빌드 옵션 변경  
 	
