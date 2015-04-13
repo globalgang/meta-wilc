@@ -52,7 +52,7 @@ linux4sam change log
 6. add patch file
 [wilc1000-demo-init](https://github.com/leedean/meta-wilc/blob/master/recipes-wilc/demo/script/wilc1000-demo-init)
 
-### Override or Edit Module ###
+### Override or Edit Module (example linux kernel) ###
 1. Create Meta directory ([meta-wilc](https://github.com/leedean/meta-wilc))
 2. Create Recipe driectory ([recipes-kernel](https://github.com/leedean/meta-wilc/tree/master/recipes-kernel))
 3. Create Module folder ([linux](https://github.com/leedean/meta-wilc/tree/master/recipes-kernel/linux))
@@ -70,6 +70,7 @@ BBLAYERS ?= " \
 
 ### Edit for Configuration ###
 - (build_dir)/conf/**local.conf**  
+> ***input correct package name***
 ~~~~  
 IMAGE_INSTALL_append += " \
   hostapd \
@@ -77,26 +78,28 @@ IMAGE_INSTALL_append += " \
   wilc1000 \
   wilc1000-demo-init"
 ~~~~  
+
 - (meta dir)/conf/distro/**poky.conf**  
 ~~~~
 CONNECTIVITY_CHECK_URIS = ""
 ~~~~
 
-# Poky Build Error Fix #
-1. Library
-  - build-essential
-  - device-tree-compiler
-  - lzma
-  - lzop
-  - u-boot-tools
-  - libncurses5-dev:amd64 
-  - diffstat
-  - gawk
-  - chrpath
-  - libsdl1.2-dev
-  - pandoc
-  - texinfo
-
+# Need Library #
+~~~~
+build-essential  
+device-tree-compiler  
+lzma  
+lzop  
+u-boot-tools  
+libncurses5-dev:amd64  
+diffstat  
+gawk  
+chrpath  
+libsdl1.2-dev  
+pandoc  
+texinfo  
+~~~~
 
 ## Reference ##
+https://www.yoctoproject.org/  
 http://hyuns-study.blogspot.kr/2013/09/yocto.html
