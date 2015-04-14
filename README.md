@@ -33,7 +33,7 @@ linux4sam change log
 
 ### Build ###
 1. bb / bbappend parsing
-2. download or fetch source from web  
+2. download or fetch source from web(***use bb***)  
 3. checksum
 4. patch(***use bbappend***)  
 5. configuration(***use conf***)
