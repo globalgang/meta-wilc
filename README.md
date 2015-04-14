@@ -18,19 +18,18 @@ linux4sam change log
 
 ### File ###
 1. bb file  
-	>Add new Module or Change upgrade Module  
-	>do not create duplicate file name  
-	>패키지명을 필히 작성해야하며, 빌드시 해당 명칭을 확인하여 빌드 진행  
-	>웹에서 다운로드하거나 파일을 구비하여 컴파일후 복사 혹은 펌웨어 같은 경우 바로 복사  
+	>Add new Module or Change upgrade Module.  
+	>do not create duplicate file name.  
+	>package name is mandatory value. yocto need package name when add new module.  
+	>module is downloaded from web / ftp / git / etc... or use existing additional folder.  
 	
 2. bbappend file  
-	>Edit or Override module  
-	>It has sam folder tree about existing modules for edit or override.  
-	>모듈의 편집이기 때문에 "수정될 사항을 기입"하면 됨.  
-	>파일 패치 혹은 빌드 옵션 변경  
+	>Edit or Override module.  
+	>It must have same folder tree about modules for edit or override.  
+	>do patch or modify module. (can change bb value.)  
 	
 3. additional file
-	>추가되는 파일 혹은 패치 사항
+	>add file(script / config / etc...) or patch file.
 
 ### Build ###
 1. bb / bbappend parsing
