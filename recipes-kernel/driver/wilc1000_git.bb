@@ -2,7 +2,7 @@ LICENSE = "CLOSED"
 
 inherit module
 
-SRCREV = "14f641806a681cf85862493f65ea8de6e1fffe12"
+SRCREV = "${AUTOREV}"
 SRC_URI = "git://github.com/linux4sc/wireless-driver.git"
 
 S = "${WORKDIR}/git/wilc1000/"
