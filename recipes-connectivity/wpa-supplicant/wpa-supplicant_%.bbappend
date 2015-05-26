@@ -1,5 +1,6 @@
-#Add P2P Flag
+#Add Debug / P2P Flag
 
-do_configure() {
-    echo "CONFIG_P2P=y" >> wpa_supplicant/.config
-}
+EXTRA_OEMAKE =' \
+	CONFIG_DEBUG_FILE=y \
+	CONFIG_P2P=Y \
+	'
